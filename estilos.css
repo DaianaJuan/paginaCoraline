@@ -57,7 +57,7 @@ h1{
     color: antiquewhite; 
 }
 
-.h2{
+.main h2{
     font-size: 1.7rem;
     padding: 0.5rem;
     background-color:rgba(133, 75, 141, 0.534);
@@ -65,10 +65,14 @@ h1{
     color:#fdcfcf;
 }
 
-.h3{
+.main h3{
     font-size: 1.3rem;
     padding: 1rem;
     color: #8c96a0;
+}
+
+.main p{
+  color: antiquewhite;
 }
 
 article.main{
@@ -96,34 +100,6 @@ h4{
     padding: 1rem;
 }
 
-.contenidoLibro{
-    background-color: #fdcfcf;
-   
-}
-.imgLibro img{
-    width: 70%;
-    box-shadow: 4px 4px #8c96a0;
-    border-radius: 10px;
-}
-.infoLibro p{
-    font-size: 0.9rem;
-    padding: 1rem;
-    
-}
-
-.imgGaiman img{
-    width: 70%;
-    box-shadow: 4px 4px #8c96a0;
-    border-radius: 10px;
-}
-
-#sobreCoraline p{
-    color: antiquewhite;
-}
-
-.textoVideo{
-    color: antiquewhite;
-}
 
 /*grid*/
 .grid-container > * {
@@ -207,13 +183,62 @@ h4{
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
-}
-
-.flexVideo{
-    padding-top: 5rem;
+    grid-row-gap: 3rem;
+    padding-bottom: 3rem;
 }
 
 .textoVideo{
     padding-right: 2rem;
+}
+
+/*grid sobre el libro*/
+
+/*.gridLibro{
+  display: grid; 
+ /* 2 columnas */
+ /*grid-template-columns: 1fr 2fr;
+ /* 6 filas */
+ /*grid-template-rows: auto auto auto auto auto;
+ justify-content: space-around;
+ align-items: center;
+ align-content: space-between;
+
+}
+*/
+
+.gridLibro{
+  display: grid;
+  grid-template-areas:
+  "titulo titulo"
+  "p1 p1"
+  "imgLibro textoLibro"
+  "p2 p2"
+;
+  /*2 columnas*/
+  grid-template-columns: auto;
+  /*4 filas*/
+  grid-template-rows: 1fr  auto;
+  grid-row-gap: 3rem;
+ grid-column-gap: 10px;
+ height: auto;
+ margin: 0;
+ align-items: center;
+}
+
+h2{
+  grid-area: titulo;
+}
+
+.imgLibro{
+  grid-area: imgLibro;
+}
+.texto{
+  grid-area: textoLibro; 
+}
+
+.imgLibro img{
+  width: 70%;
+  box-shadow: 4px 4px #8c96a0;
+  border-radius: 10px;
 }
 
